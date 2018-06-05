@@ -1,0 +1,148 @@
+<!-- The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul> 
+
+
+
+<!-- doing content projection for understanding the lifecycle hooks  -->
+  
+<!-- <test *ngFor="let l of list">  
+  {{l}}
+</test>
+ -->
+  
+
+<button (click)="addTC()">Add TC </button> 
+<button (click)="removeTC()">Remove TC</button>
+
+<!-- <select name="" id=""> -->
+<!-- <my-own-component>
+<option value="" class="red">option1</option>
+<option value="" class="red">option2</option>
+<option value="" class="red">option3 </option>
+<option value="" class="red">option4</option>
+</my-own-component>
+ -->
+
+  <!-- <my-own-component> <!-- button portion tha 
+    <Yourchildcomponents></Yourchildcomponents>
+
+  </my-own-component>
+
+  <ng-content>  
+    <!-- it will reflect whatever child components we are passing in this myowncomponent     
+        
+  </ng-content> -->
+  
+  <!-- <p>Hello world a custom component says </p>
+  <app-hello>
+    //here put the contents of hello.component.html
+    
+  </app-hello>
+  {{54*89898}} -->
+
+
+
+  <!-- <p>{{vari}}</p> -->
+  <!-- this is in sara app me -->
+  <button (click) ="callMyFunction()"> 
+    hey there 
+  </button>
+  <input type="text" name="vari" [value]="text"/>
+    <p>{{vari}}</p>
+  
+
+
+  <!-- now dealing wiht the 2 way data binding -->
+  <!-- 1 way of <2 way data binding> through input handler -->
+  <input type="text" [value]="text" (input)="updateValue($event)"> <!-- this html property bind with the input type field -->
+
+  <input type="text" [(ngModel)]="text"> this html property bind with the input type field
+
+
+  <p>{{text}}</p>
+
+
+  
+
+
+  <!-- //learning ngFor directive  -->
+
+  <table>
+     <caption>table title and/or explanatory text</caption> 
+    <thead>
+      <tr>
+        <th>header</th>
+      <!-- when th is closed then jis tag ke andar bhi ye th nested hoga uske bahar wale tags apne aap close ho jayenge upon closing of th tag like this </th>  -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S.No</td>
+        <td>Name</td>
+        <td>Online</td>
+      </tr>
+      <tr *ngFor="let record of records;let i = index;let evenrecord= even;let oddrecord=odd;let firstrecord=first;let lastrecord=last;" [ngClass]="{odd: oddrecord,even: evenrecord,first: firstrecord,last: lastrecord}"><!-- adding a class to this tr bhool ke bhi na SEMICOLON DAALNA YHA PE --> 
+         <td><th>{{i}}</th> <!-- behind the scenes index apne aap 0 se initialised hai and then angular ko pta hai har ek iteration me i have to update the value of i jo ki controller se view aayegi kyunki whha {{}} ye the -->
+         <td><th>{{evenrecord}}</th>
+         <td>{{oddrecord}}</td>
+         <td><h1>{{record.name}}</h1></td>  
+         <td><h1>{{record.online}}</h1></td>
+
+      </tr>
+    </tbody>
+  </table>
+
+<!-- 
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+      </tr>
+    </thead>
+    <!-- emmet magic  
+  </table> 
+
+
+
+
+
+<!-- using the router here -->
+<a [routerLink]="['/data']">Go to Data Page</a> 
+<!-- yha pe bhi square brackets ka dhyaan rakhna  -->
+
+<h1>This will always display </h1>
+<router-outlet>
+  this would display components which this router module tells them to do... 
+</router-outlet>
+      
+
+
+
+  
+
+
+
+
+
+
+
+
+
+

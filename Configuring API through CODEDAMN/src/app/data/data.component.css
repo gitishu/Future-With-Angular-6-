@@ -1,0 +1,15 @@
+tr.even{
+	background: black;
+	color: white;
+}
+tr.odd{
+	background: purple;
+	color: #478545;
+}
+tr.first{/* targetting the table row by the first class */
+background: darkcyan;
+
+}tr.last{
+	background: darkorange;
+}
+/*here table record jo first wala hai tr.first and last wala is tr.last */

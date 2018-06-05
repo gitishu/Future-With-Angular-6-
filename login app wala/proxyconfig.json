@@ -1,0 +1,10 @@
+{
+	"/api":{//here api endpoints to be proxified it will send all my api requests to this another  server 
+		"target": "http://localhost:1600",//for my api calls to the backend 
+		"secure": false,
+		"changeOrigin": true//propertis regarding that api..
+	}  
+}
+
+
+

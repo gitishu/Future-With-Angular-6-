@@ -1,0 +1,26 @@
+
+<table>
+  <!-- <caption>table title and/or explanatory text</caption> -->
+  <thead>
+    <tr>
+      <th>header</th><!-- when th is closed then jis tag ke andar bhi ye th nested hoga uske bahar wale tags apne aap close ho jayenge upon closing of th tag like this </th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S.No</td>
+      <td>Name</td>
+      <td>Online</td>
+    </tr>
+    <tr *ngFor="let record of records;let i = index;let evenrecord= even;let oddrecord=odd;let firstrecord=first;let lastrecord=last;" [ngClass]="{odd: oddrecord,even: evenrecord,first: firstrecord,last: lastrecord}"><!-- adding a class to this tr bhool ke bhi na SEMICOLON DAALNA YHA PE -->
+       <td><th>{{i}}</th> <!-- behind the scenes index apne aap 0 se initialised hai and then angular ko pta hai har ek iteration me i have to update the value of i jo ki controller se view aayegi kyunki whha {{}} ye the -->
+       <td><th>{{evenrecord}}</th>
+       <td>{{oddrecord}}</td>
+       <td><h1>{{record.name}}</h1></td>  
+       <td><h1>{{record.online}}</h1></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a routerLink="/">Go Back!</a>

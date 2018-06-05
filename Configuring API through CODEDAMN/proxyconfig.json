@@ -1,0 +1,10 @@
+{
+	"/api":{//here api endpoints to be proxified 
+		"target": "http://localhost:1600",
+		"secure": false,
+		"changeOrigin": true//propertis regarding that api..
+	} 
+}
+
+
+
